@@ -1,0 +1,159 @@
+.pokedex {
+    max-width: 270px;
+    width: 100%;
+    text-transform: capitalize;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+#numberID{
+    opacity: .5;
+}
+.headerInfo {
+    padding: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.types {
+    margin-top: 0.7rem;
+    display: flex;
+}
+
+.types span {
+    width: 59px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    ;
+    text-align: center;
+    filter: brightness(1.1);
+    border-radius: 0.650rem;
+}
+
+.types span:nth-child(1) {
+    margin-right: 1rem;
+}
+
+.pokemonImg {
+    width: 55%;
+    margin: auto;
+    top: 2.4rem;
+    position: relative;
+}
+
+.pokemonImg img {
+    width: 100%;
+}
+
+.about {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem 0 .5rem .3rem;
+}
+
+.about table {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-around;
+}
+
+.about table thead tr,
+.about table tr {
+    display: flex;
+    flex-direction: column;
+}
+
+.about table tr th {
+    color: rgba(25, 25, 25, 0.516);
+    text-align: left;
+}
+
+.about table tr th,
+.about table tr td {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+tbody tr td:nth-child(1){
+    font-size: 0.7rem;
+}
+thead tr h4{
+    font-size: 0.789rem;
+}
+.normal {
+    background: #a6a877;
+}
+
+.grass {
+    background: #77c850;
+}
+
+.fire {
+    background: #ee7f30;
+}
+
+.water {
+    background: #678fee;
+}
+
+.electric {
+    background: #f7cf2e;
+}
+
+.ice {
+    background: #89d5d7;
+}
+
+.ground {
+    background: #dfbf69;
+}
+
+.flying {
+    background: #a98ff0;
+}
+
+.poison {
+    background: #a040a0;
+}
+
+.fighting {
+    background: #bf3029;
+}
+
+.psychic {
+    background: #f65687;
+}
+
+.dark {
+    background: #725847;
+}
+
+.rock {
+    background: #b8a137;
+}
+
+.bug {
+    background: #a8b720;
+}
+
+.ghost {
+    background: #6e5896;
+}
+
+.steel {
+    background: #b9b7cf;
+}
+
+.dragon {
+    background: #6f38f6;
+}
+
+.fairy {
+    background: #f9aec7;
+}

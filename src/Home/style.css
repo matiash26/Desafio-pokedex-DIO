@@ -1,0 +1,29 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background: rgb(38, 38, 38);
+}
+.home .Content{
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.btn-load{
+    width: 7rem;
+    margin: 2rem auto;
+}
+.btn-load button{
+    border: none;
+    padding: .7rem 1rem;
+    border-radius: .4rem;
+    color: white;
+    background: #6c79db;
+    cursor: pointer;
+}
+.btn-load button:hover{
+    background: #5763bb;
+}
