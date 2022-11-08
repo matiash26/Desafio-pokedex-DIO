@@ -9,12 +9,12 @@ function Home() {
         return fetch(data.url).then(response => response.json())
     }
     useEffect(() => {
-        const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=12`
+        const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=10`
         fetch(url)
             .then(response => response.json())
             .then(data => data.results.map(getDetails))
             .then(detailPokemon => Promise.all(detailPokemon))
-            .then(pokemonDetails => setPokemon(pokemonDetails))
+            .then(pokemonDetails => setPokemon(prev => [...prev, ...pokemonDetails]))
             .catch(error => console.error(error))
     }, [offset])
     return (

@@ -1,21 +1,31 @@
 import "./style.css"
 export function Pokedex({ info }) {
-    const types = [...info.types]
-    const ability = [...info.abilities]
-    console.log(ability)
+    const pokeObjt = (data) => {
+        return {
+            types: data?.types.map(el => el?.type?.name),
+            id: data.id,
+            name: data.name,
+            image: data.sprites.other.dream_world.front_default,
+            height: data.height,
+            weight: data.weight,
+            ability: data.abilities.map(el => el.ability.name),
+            stats: data.stats.map(el => el.base_stat)
+        }
+    }
+    const pokemon = pokeObjt(info);
     return (
-        <section className={`pokedex ${types[0].type.name}`}>
+        <section className={`pokedex ${pokemon.types[0]}`}>
             <div className="headerInfo">
                 <div>
-                    <h1>{info.name}</h1>
+                    <h1>{pokemon.name}</h1>
                     <div className="types">
-                        {types.map(i => <span className={i.type.name}>{i.type.name}</span>)}
+                        {pokemon.types.map(name => <span className={name}>{name}</span>)}
                     </div>
                 </div>
-                <span id="numberID">#{info.id}</span>
+                <span id="numberID">#{pokemon.id}</span>
             </div>
             <div className="pokemonImg">
-                <img src={info.sprites.other.dream_world.front_default} alt={info.name} />
+                <img src={pokemon.image} alt={pokemon.image} />
             </div>
             <div className="about">
                 <table>
@@ -37,18 +47,13 @@ export function Pokedex({ info }) {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{ability.map(el => el.ability.name).join(", ")}</td>
-                            <td>{info.height}</td>
-                            <td>{info.weight}</td>
+                            <td>{pokemon.ability.map(ability => ability).join(", ")}</td>
+                            <td>{pokemon.height}</td>
+                            <td>{pokemon.weight}</td>
                             <br />
                             <br />
                             <br />
-                            <td>{info.stats[0].base_stat}</td>
-                            <td>{info.stats[1].base_stat}4</td>
-                            <td>{info.stats[2].base_stat}</td>
-                            <td>{info.stats[3].base_stat}</td>
-                            <td>{info.stats[4].base_stat}</td>
-                            <td>{info.stats[5].base_stat}</td>
+                            {pokemon.stats.map(stats => <td>{stats}</td>)}
                         </tr>
                     </tbody>
                 </table>
